@@ -1,0 +1,53 @@
+.hollow-ring {
+  margin: auto;
+  position: relative;
+  margin-top: 20px;
+  width: 33px;
+  height: 33px;
+}
+
+.ring {
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+}
+
+.ring:nth-child(1) {
+  animation-name: clockwise;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: #da4733;
+  border-left-color: transparent;
+  border-bottom-color: #335ada;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+.ring:nth-child(2) {
+  animation-name: clockwise;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: transparent;
+  border-left-color: #c2e73b;
+  border-bottom-color: transparent;
+  border-right-color: #3be744;
+  border-radius: 50%;
+}
+
+@keyframes clockwise {
+  from {
+    transform: rote(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
