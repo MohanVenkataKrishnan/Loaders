@@ -1,0 +1,72 @@
+.hollow-ring {
+  margin: auto;
+  position: relative;
+  margin-top: 20px;
+  width: 33px;
+  height: 33px;
+}
+
+.ring {
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+}
+
+.ring:nth-child(1) {
+  animation-name: clockwise;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: #5de73b;
+  border-left-color: #3bbfe7;
+  border-bottom-color: #e7553b;
+  border-right-color: #3a413b;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 0%;
+  transform: rotate(-45deg);
+}
+
+.ring:nth-child(2) {
+  animation-name: anticlockwise;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  border-width: 3px;
+  border-style: solid;
+  border-top-color: #3bbfe7;
+  border-left-color: #5de73b;
+  border-bottom-color: #3a413b;
+  border-right-color: #e7553b;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 0%;
+  transform: rotate(135deg);
+  margin-left: 50px;
+}
+
+@keyframes clockwise {
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  0% {
+    transform: rotate(315deg);
+  }
+}
+
+@keyframes anticlockwise {
+  50% {
+    transform: rotate(135deg);
+  }
+
+  0% {
+    transform: rotate(495deg);
+  }
+}
