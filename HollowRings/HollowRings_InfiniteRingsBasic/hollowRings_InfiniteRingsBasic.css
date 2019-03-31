@@ -1,0 +1,59 @@
+.hollow-ring {
+  margin: auto;
+  position: relative;
+  margin-top: 200px;
+  width: 33px;
+  height: 33px;
+  transform: rotate(40deg);
+}
+
+.ring {
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 33px;
+  height: 33px;
+}
+
+
+.ring:nth-child(1) {
+  animation: infiniteloopXAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+}
+
+.ring:nth-child(1)::after {
+  animation: infiniteloopYAxis 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+
+@keyframes infiniteloopXAxis {
+  50% {
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    transform: translateX(200px);
+  }
+}
+
+@keyframes infiniteloopYAxis {
+  30% {
+    border-color: green;
+  }
+
+
+  50% {
+    border-color: aquamarine;
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    transform: translateY(-150px);
+  }
+
+  70% {
+    border-color: yellow;
+  }
+}
